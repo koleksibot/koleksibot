@@ -1,59 +1,271 @@
 <!DOCTYPE html>
-<html>
-  <head>
-	 <center>
-	   <!-- Di Buat Oleh 
-	  Jamet1337-->
-	 	<title>Bot Nulis - Online Simple </title>	
-			  	 <link type="image/png" href="https://i.waifu.pics/8CGNNMq.jpg" rel="icon">
-				 <meta property="og:image" content="https://i.waifu.pics/8CGNNMq.jpg">
-				 <meta content="Bot Untuk Menulis Otomatis." name="description">
-				 <meta content="Bot Nulis" name="keywords">
-				 <meta name="theme-color" content="black">
-				 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<div class="tile">
-		<!-- Hasil Gambar Akan Muncul Di Sini -->
-		<div class="tile-body" id="hasil">
-		</div>
-	</div>
-	<br>
-	<br>
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/95776110?s=96&v=4" type="image/x-icon">
+        <script data-ad-client="ca-pub-4461745103307389" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-	<div class="tile">
-		<div class="tile-body">
-			<br>
-			<textarea id='nama' class="form-control" placeholder="Masukan nama kamu !" required=true></textarea>
-			<br>
-			<textarea id='kelas' class="form-control" placeholder="Masukan kelas !" required=true></textarea>
-			<br>
-			<textarea id='nomor' class="form-control" placeholder="Masukan nomor absen !" required=true></textarea>
-			<br>
-			<textarea id='teks' class="form-control" placeholder="Masukan Text Yang Ingin Di Tulis !" rows="12" required=true></textarea>
-		</div>
-	</div>
-	<div class="tile">
-		<div class="row">
-		</div>
-		<div class="col">
-			<input type='button' onclick="buat()" value="TULIS" id='button' class="btn btn-danger btn-block">
-		</div>
-	</div>
-                    
-	<script>
-		function buat() {
-			var jeneng = encodeURIComponent(document.getElementById("nama").value);
-			var kelase = encodeURIComponent(document.getElementById("kelas").value);
-			var nomore = encodeURIComponent(document.getElementById("nomor").value);
-			var isi = encodeURIComponent(document.getElementById("teks").value);
-			document.querySelector('#hasil').innerHTML = `<img style='max-width: 450px;max-height: 450px;' src='https://fdz-app.herokuapp.com/api/tulis?nama=${jeneng}&no=${nomore}&kelas=${kelase}&text=${isi}' alt="hasil.png"></img>`;
-		}
-		
-		
-		//ambil aja link api nya kalau mau gumain tapi ingat request nya jangan spam ya
-		
-	</script>
-               </div>
-          </div>
-          </body>
-          </html>
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="https://koleksibot.github.io/Koleksibot-V3/assets/css/styles.css">
+        <link rel="stylesheet" href="https://koleksibot.github.io/Koleksibot-V3/css/loading-bar.css">
+        <link href="https://koleksibot.github.io/Koleksibot-V3/assets/bundle/toaststrap.css" rel="stylesheet" media="all" />
+        <title>Koleksi Bot Pages V3 | Portofolio</title>
+    </head>
+    <body style="overflow: hidden !important; max-width: 100vw !important;">
+    <body oncopy="return false" oncut="return false" onpaste="return false">
+
+    	<style>
+a {
+  color: inherit;
+}
+
+</style>
+        <header id="header">
+        <!--=============== HEADER ===============-->
+        <header class="profile container">
+            <!-- Theme button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <div class="profile__container grid">
+                <div class="profile__data">
+                    <div class="profile__border">
+                        <div class="profile__perfil">
+                            <!-- Insert your image, according to the example size of the portfolio -->
+                            <img src="https://avatars.githubusercontent.com/u/95776110?s=96&v=4" alt="">
+                        </div>
+                    </div>
+
+                    <h2 class="profile__name">Koleksibot</h2>
+                    <h3 class="profile__profession">Pengembang Perangkat LunaK ID</h3>
+
+                    <ul class="profile__social">
+                        <a href="https://www.instagram.com/" target="_blank" class="profile__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://t.me/anonsecteam/" target="_blank" class="profile__social-link">
+                            <i class="ri-telegram-line"></i>
+                        </a>
+                        <a href="https://github.com/koleksibot" target="_blank" class="profile__social-link">
+                            <i class="ri-github-line"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=62895369318181&text=Menu" target="_blank" class="profile__social-link">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        <a href="//github.com/koleksibot" target="_blank" class="profile__social-link">
+                            <i class="ri-bubble-chart-fill"></i>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="profile__info grid">
+                    <div class="profile__info-group">
+                        <h3 class="profile__info-number" id="sitor">7</h3>
+                        <p class="profile__info-description">
+                            Visitor
+                        </p>
+                    </div>
+                    <div class="profile__info-group">
+                        <h3 class="profile__info-number" id="prj">+20</h3>
+                        <p class="profile__info-description">
+                            Completed <br> projects
+                        </p>
+                    </div>
+                    <div class="profile__info-group">
+                        <h3 class="profile__info-number">96</h3>
+                        <p class="profile__info-description">Satisfied <br> customers</p>
+                    </div>
+                </div>
+
+                <div class="profile__buttons">
+                    <!-- Insert your CV -->
+                    <a href="https://chat.whatsapp.com/J4ii7zkiySP9s6xdlZDggp" class="button">
+                        Join Group <i class="ri-whatsapp-line"></i>
+                    </a>
+
+                    <div class="profile__buttons-small">
+                        <!-- Insert a real number plus country code -->
+                        
+                        <!-- Insert your brand name or profile -->
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--=============== MAIN ===============-->
+        <main class="main">
+            <section class="filters container">
+                <!--=============== FILTERS TABS ===============-->
+                <ul class="filters__content">
+                    <button class="filters__button filter-tab-active" data-target="#projects">
+                        Github Repo
+                    </button>
+                    <button class="filters__button" data-target="#skills">
+                        Skills
+                    </button>
+                </ul>
+
+                <div class="filters__sections">
+                    <!--=============== PROJECTS ===============-->
+                    <div class="projects__content grid filters__active" data-content id="projects">
+                        
+
+                        
+                    </div>
+
+                    <!--=============== SKILLS ===============-->
+                    <div class="skills__content grid" data-content id="skills">
+                        <div class="skills__area">
+                            <h3 class="skills__title">Frontend Developer</h3>
+    
+                            <div class="skills__box">
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">HTML</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">CSS</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">JavaScript</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">React</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Bootstrap</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Git</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills__area">
+                            <h3 class="skills__title">Backend Developer</h3>
+    
+                            <div class="skills__box">
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">PHP</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">MySQL</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Firebase</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Python</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Node Js</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer container">
+            <span class="footer__copy">
+                &#169; Koleksibot. All rigths reserved
+            </span>
+        </footer>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/bundle/toaststrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+jQuery(function(){
+   jQuery('#theme-button').click();
+});
+
+
+
+
+</script>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="https://koleksibot.github.io/Koleksibot-V3/assets/js/scrollreveal.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="https://koleksibot.github.io/Koleksibot-V3/assets/js/main.js"></script>
+        <script src="https://koleksibot.github.io/Koleksibot-V3/script.js"></script>
+    </body>
+</html>
